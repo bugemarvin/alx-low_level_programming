@@ -8,13 +8,9 @@ int main(void)
 int base_numbers;
 char characters;
 for (base_numbers = 48; base_numbers < 58; base_numbers++)
-{
 putchar(base_numbers);
-}
 for (characters = 'a'; characters <= 'f'; characters++)
-{
 putchar(characters);
-}
 putchar('\n');
 return (0);
 }
