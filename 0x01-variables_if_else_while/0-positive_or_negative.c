@@ -8,14 +8,14 @@
 */
 int main(void)
 {
-int number;
+int n;
 srand(time(0));
-number = rand() - RAND_MAX / 2;
-if (number > 0 && number == 98)
-printf("%d is positive\n", number);
-else if (number < 0 && number == -98)
-printf("%d is negative\n", number);
-else if (!(number > 0) && !(number < 0))
-printf("%d is zero\n", number);
+n = rand() - RAND_MAX / 2;
+if (n > 0 && n == 98)
+printf("%d is positive\n", n);
+else if (n < 0 && n == -98)
+printf("%d is negative\n", n);
+else if (!(n > 0) && !(n < 0))
+printf("%d is zero\n", n);
 return (0);
 }
