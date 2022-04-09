@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
 * Description: main - display of all posible combinations
 * Return: 0 if successful
