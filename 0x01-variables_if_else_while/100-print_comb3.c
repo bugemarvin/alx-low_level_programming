@@ -6,23 +6,27 @@
 */
 int main(void)
 {
-int i;
-int n;
-for (n = '0'; n <= '9'; n++)
-{
-for(i = '0'; i <= '9'; i++)
-{
-if(n < i)
-{
-putchar(n);
-putchar(i);
-if(n != '9' || (n == '9' && i != '9'))
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-return (0);
-}
+	int c, i;
+
+	for (c = '0'; c <= '9'; c++)
+	{
+		for (i = '0'; i <= '9'; i++)
+		{
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
+
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
