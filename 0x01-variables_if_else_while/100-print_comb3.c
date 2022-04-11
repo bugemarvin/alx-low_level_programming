@@ -7,17 +7,21 @@ int main(void)
 {
 int i;
 int n;
-for (n = 1; n < 90; n++)
+for (n = '0'; n <= '9'; n++)
 {
-for (i = n;;)
+for(i = '0'; i <= '9'; i++)
 {
-if (i / 10 % 10 > i % 10)
-break;
-if (i /= 10 == 0)
+if(n < i)
 {
-putchar("%d", n);
-break;
+putchar(n);
+putchar(i);
+if(n != '9' || (n == '9' && i != '9'))
+{
+putchar(',');
+putchar(' ');
 }
 }
+}
+return (0);
 }
 }
