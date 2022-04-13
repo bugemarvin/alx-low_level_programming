@@ -3,8 +3,9 @@
 *Description: main - 
 *Return: 0 for succes
 */
-int _islower(int c)
+int _abs(int n)
 {
-	return (c >= 97 && c <= 122);
+
+return (n >= 0 ? n : n * -1);
 
 }
