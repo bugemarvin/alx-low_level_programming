@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *Description: main - 
- *Return: 0 for succes
- */
+*Description: main - working external headers
+*Return: 0 for succes
+*/
 int main(void)
 {
 _putchar('_');
