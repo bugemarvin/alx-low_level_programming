@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
-*print_last_digit - as functions entry
-*@c: The character to print 
+*print_to_98 - as functions entry
+*@n: The character to print
 *Return: 0 or 1 for succes
 *On error, -1 is returned, and errno is set appropriately.
 */

@@ -1,26 +1,23 @@
 #include "main.h"
 /**
-*print_last_digit - as functions entry
-*@c: The character to print 
+*jack_bauer - as functions entry
 *Return: 0 or 1 for succes
 *On error, -1 is returned, and errno is set appropriately.
 */
 void jack_bauer(void)
 {
-
 int h1;
 int h2;
 int m1;
 int m2;
 int a = 9;
-
 h2 = 0;
 while (h2 <= 2)
 {
-	if (h2 == 2)
-	{
-		/*Restrain to 23h, not 29*/
-		a = 3;
+if (h2 == 2)
+{
+  /*Restrain to 23h, not 29*/
+a = 3;
 	}
 	h1 = 0;
 	while (h1 <= a)

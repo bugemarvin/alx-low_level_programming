@@ -1,7 +1,8 @@
 #include "main.h"
 /**
-*print_last_digit - as functions entry
-*@c: The character to print 
+*add - as functions entry
+*@a: The character to print
+*@b: the character to print
 *Return: 0 or 1 for succes
 *On error, -1 is returned, and errno is set appropriately.
 */
