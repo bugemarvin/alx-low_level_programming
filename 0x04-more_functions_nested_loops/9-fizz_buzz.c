@@ -3,7 +3,6 @@
 #include "main.h"
 /**
 * Description: main - FizzBuzz Challenge diviseble with 3,5 and 15
-* @a: prints out a number
 * Return: 0 or 1 Always succes
 */
 int main(void)
@@ -13,20 +12,21 @@ for (a = 1; a <= 100; a++)
 {
 if ((a % 3) == 0)
 {
-printf("Fizz\t");
+printf("Fizz");
 if ((a % 5) == 0)
 {
-printf("Buzz\t");
+printf("Buzz");
 if ((a % 15) == 0)
 {
-printf("FizzBuzz\t");
+printf("FizzBuzz");
 }
 }
 }
 else
 {
-printf("%d\t", a);
+printf("%d", a);
 }
+printf(" ");
 }
 return (0);
 }
