@@ -6,8 +6,9 @@
 * @a: prints out a number
 * Return: 0 or 1 Always succes
 */
-int main(int a)
+int main(void)
 {
+int a;
 for (a = 1; a <= 100; a++)
 {
 if ((a % 3) == 0)
