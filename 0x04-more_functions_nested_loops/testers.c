@@ -5,12 +5,12 @@
 */
 int main(void)
 {
-char c;
-for (c = '0'; c <= '9'; c++)
-if (c != '2' && c != '4')
-{
-putchar(c);
-}
-putchar('\n');
-return (0);
+int c;
+int b;
+for (c = 0; c < 10; c++)
+for ( b = 0; b <= 14; b++)
+if (b > 9)
+putchar((b / 10) + 0);
+putchar((b % 10) + 48);
+putchar(10);
 }
