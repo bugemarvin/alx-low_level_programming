@@ -6,8 +6,13 @@
 */
 void print_numbers(void)
 {
-for (numbers = 0; numbers <= 9; numbers++)
-_putchar(numbers);
-_putchar('\n');
+int a;
+int b;
+a = 0;
+b = 9;
+if (a >= 0 && a != b)
+{
+_putchar(a)++;
+}
 return (0);
 }
