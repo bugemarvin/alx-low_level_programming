@@ -12,5 +12,4 @@ for (number = 48; number < 58; number++)
 putchar(number);
 }
 putchar('\n');
-return (0);
 }
