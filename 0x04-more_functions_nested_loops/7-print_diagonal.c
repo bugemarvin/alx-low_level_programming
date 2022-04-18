@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * print_diagonal - main entry point
  * @n: print a number.
  * Return: 0 or 1 On success.
  * On error, -1 is returned, and errno is set appropriately.
  */
+
 void print_diagonal(int n)
 {
 if (n <= 0)
