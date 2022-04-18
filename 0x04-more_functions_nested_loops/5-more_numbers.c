@@ -6,5 +6,5 @@
  */
 void more_numbers(void)
 {
-return (0);
+
 }

@@ -6,5 +6,5 @@
  */
 void print_most_numbers(void)
 {
-return (0);
+
 }

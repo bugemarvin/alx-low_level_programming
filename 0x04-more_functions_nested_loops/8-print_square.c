@@ -6,5 +6,5 @@
  */
 void print_square(int size)
 {
-return (0);
+
 }
