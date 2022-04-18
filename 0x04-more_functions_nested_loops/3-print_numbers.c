@@ -6,13 +6,11 @@
 */
 void print_numbers(void)
 {
-int a;
-int b;
-a = 0;
-b = 9;
-if (a >= 0 && a != b)
+while (num < 9)
 {
-_putchar(a)++;
+num = 0;
+_putchar(num);
 }
+_putchar('\n');
 return (0);
 }
