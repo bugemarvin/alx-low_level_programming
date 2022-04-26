@@ -13,9 +13,9 @@ char *_strpbrk(char *s, char *accept)
 	unsigned int *ser;
 
 	ser = strpbrk(s, accept);
-	if (ser)
+	if (ser != '\0')
 	{
 	return (ser);
 	}
-	return NULL;
+	return (0);
 }
