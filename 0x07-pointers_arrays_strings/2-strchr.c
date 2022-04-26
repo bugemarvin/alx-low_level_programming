@@ -10,5 +10,10 @@
 
 char *_strchr(char *s, char c)
 {
-	strchrnul(s, c);
+	if (!(s = NULL))
+	{
+		strchr(s, c);
+		return (s);
+	}
+	return (0);
 }
