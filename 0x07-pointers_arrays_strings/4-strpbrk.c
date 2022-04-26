@@ -10,6 +10,8 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int ser;
+	unsigned int *ser;
+
+	ser = strpbrk(s, accept);
 	return (ser);
 }
