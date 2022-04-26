@@ -10,6 +10,6 @@
 
 char *_strchr(char *s, char c)
 {
-	strchrnul(s + 0, c);
+	strchrnul(s, c);
 	return (s);
 }
