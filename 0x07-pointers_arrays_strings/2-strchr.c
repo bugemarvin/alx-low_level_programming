@@ -11,5 +11,10 @@
 
 char *_strchr(char *s, char c)
 {
-	putchar(s);
+	unsigned int a;
+
+	a = c - '0';
+
+	strchr(s, a);
+	return (s);
 }
