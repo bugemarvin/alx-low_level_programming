@@ -10,9 +10,9 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	if(*s)
+	if (*s)
 	{
 		return (strpbrk(s, accept));
 	}
-	return '\0';
+	return ('\0');
 }
