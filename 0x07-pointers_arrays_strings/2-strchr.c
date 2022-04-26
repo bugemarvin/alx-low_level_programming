@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
   * _strchr - main entry point.
@@ -13,7 +14,7 @@ char *_strchr(char *s, char c)
 	char *ser;
 
 	ser = strchr(s, c);
-	if (!(ser = NULL))
+	if (ser != NULL)
 	{
 		putchar(s);
 	}
