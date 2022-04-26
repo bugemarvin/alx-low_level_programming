@@ -10,15 +10,15 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	char *ser;
+	unsigned int ser;
 	unsigned int len;
 
-	len = strspn(s, accept)
-	ser = strpbrk(s, accept);
-	while (ser != len)
+	for (len = 0; s[len] != '\0'; len++)
+		;
+	for (ser = 0; s[ser] != '\0'; ser++)
+	while (s[ser] != s[len])
 	{
-	return (ser);
-	ser++;
+		return (s + 2);
 	}
 	return (0);
 }
