@@ -11,9 +11,11 @@
 char *_strpbrk(char *s, char *accept)
 {
 	char *ser;
+	unsigned int len;
 
+	len = strspn(s, accept)
 	ser = strpbrk(s, accept);
-	if (ser != '\0')
+	if (ser != len)
 	{
 	return (ser);
 	}
