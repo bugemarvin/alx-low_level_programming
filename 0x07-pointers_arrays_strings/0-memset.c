@@ -5,12 +5,10 @@
   * @s: first string is a pointer.
   * @b: second string.
   * @n: prints a number.
-  * 
-  * Returns: s Always on succes.
   */
 
 char *_memset(char *s, char b, unsigned int n)
 {
 	memset(s + 0, b, n);
-	return (s);
+	putchar(s);
 }
