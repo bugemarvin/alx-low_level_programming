@@ -11,18 +11,12 @@
 
 void print_diagsums(int *a, int size)
 {
-	int b;
+	int i;
+	int j; 
+	int sum1 = 0;
+	int sum2 = 0;
 
-	unsigned int tty;
-	unsigned int tty1;
-
-	tty = 0;
-	tty1 = 0;
-
-	for (b = 0; b < size; b++)
-	{
-		tty += a[(size * b) + b];
-		tty1 += a[(size * (b + 1)) - (b + 1)];
-	}
-	printf("%d, %d\n", tty, tty1);
+	for (j = 0, i = size - 1; j < (size * size); j += size + 1, i += size - 1)
+		sum1 += a[j], sum2 += a[i];
+	printf("%d, %d\n", sum1, sum2);
 }
