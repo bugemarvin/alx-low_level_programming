@@ -11,10 +11,19 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int a;
+	unsigned int *a;
+	unsigned int *ser;
+	unsigned int b;
 
 	a = c - '0';
+	ser = s + s[a];
 
-	strchr(s, a);
-	return (s);
+	for ( a = s; a < ser; a++)
+	{
+		if ( a == b)
+		{
+			return (a);
+		}
+	}
+	return (0);
 }
