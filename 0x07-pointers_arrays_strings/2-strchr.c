@@ -10,10 +10,12 @@
 
 char *_strchr(char *s, char c)
 {
-	if (!(s = NULL))
+	char *ser;
+
+	ser = strchr(s, c);
+	if (!(ser = NULL))
 	{
-		strchr(s, c);
-		return (s);
+		putchar(s);
 	}
 	return (0);
 }
