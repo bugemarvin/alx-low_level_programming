@@ -6,14 +6,11 @@
   * @b: second string as a constant.
   * @n: prints the number of bytes.
   *
-  * Returns: 0 or 1 always succes.
+  * Return: 0 or 1 always succes.
   */
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int a;
-
-	for  (a = 0; a < n; a++)
-		s[a] = b;
+	memset(s + 0, b, n);
 	return (s);
 }
