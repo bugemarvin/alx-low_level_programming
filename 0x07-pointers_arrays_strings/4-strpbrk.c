@@ -10,7 +10,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int *ser;
+	char *ser;
 
 	ser = strpbrk(s, accept);
 	if (ser != '\0')
