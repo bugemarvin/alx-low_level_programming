@@ -11,12 +11,5 @@
 
 char *_strchr(char *s, char c)
 {
-	char *ser;
-
-	ser = strchr(s, c);
-	if (ser != NULL)
-	{
-		putchar(s);
-	}
-	return (0);
+	putchar(s);
 }
