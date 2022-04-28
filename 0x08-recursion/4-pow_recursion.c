@@ -10,6 +10,8 @@
 
 int _pow_recursion(int x, int y)
 {
+	int total = x;
+
 	if (!(y >= 0))
 	{
 		return (-1);
@@ -20,6 +22,6 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		return (x *= _pow_recursion(x, (y - 1)));
+		return (total *= _pow_recursion(x, (y - 1)));
 	}
 }
