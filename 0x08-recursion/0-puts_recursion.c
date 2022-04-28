@@ -9,11 +9,10 @@
 
 void _puts_recursion(char *s)
 {
-	if (*s)
+	if (s == 0)
 	{
-		puts(s);
-		_putchar('\n');
+		return (1);
 	}
-	return ('\0');
+	puts(s);
+	_putchar('\n');
 }
-
