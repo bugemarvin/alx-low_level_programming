@@ -9,10 +9,10 @@
 
 void _print_rev_recursion(char *s)
 {
-	if (*s)
+	char *p = s;
+	if (*p != '\0')
 	{
-	}
-	else
-	{
+		_print_rev_recursion(p + 1);
+		_putchar(*p);
 	}
 }
