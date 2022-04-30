@@ -10,5 +10,8 @@
 
 void set_string(char **s, char *to)
 {
-	return (*s, &to);
+	*s = to;
+
+	if (*s)
+	_putchar(*s);
 }
