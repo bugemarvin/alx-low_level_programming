@@ -11,7 +11,4 @@
 void set_string(char **s, char *to)
 {
 	*s = to;
-
-	if (*s)
-	_putchar(*s);
 }
