@@ -14,6 +14,4 @@ int _filename(int argc, char* argv)
 	for (a = 0; a < argc; a++)
 		if (argc < 1)
 			printf("%s", argv[a]);
-
-	return (0);
 }
