@@ -1,14 +1,21 @@
-#include "main.h"
-
+#include "./main.h"
+#include <stdio.h>
 /**
-  * _filename - As the main entry point.
+  * Description: main As the entry point.
   * @argc: argument count.
   * @argv: argument value.
   *
   * Return: Always (0) on succes.
   */
 
-int _filename(int argc, char* argv)
+int main(int argc, char *argv[])
 {
-	printf("%s", argv[a]);
+	int i;
+	for (i = 0; i < argc; i++)
+	{
+		int z = strtol(argv[i],NULL,10);
+		if (argc < 1)
+			putchar(z);
+	}
+	return (0);
 }

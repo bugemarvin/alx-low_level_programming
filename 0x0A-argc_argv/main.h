@@ -1,5 +1,5 @@
-#ifndef MAIN_H_INCLUDE
-#define MAIN_H_INCLUDE
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
   * Author: Marvin Kurland
