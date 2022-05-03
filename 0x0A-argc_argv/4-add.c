@@ -32,11 +32,13 @@ int main(int argc, char *argv[])
 		c = strtol(argv[a], NULL, 10);
 		sum += c;
 	}
-	if (argc >= 2)
+	if (argc <= )
+	{
+		printf("0\n");
+	}
+	else
 	{
 		printf("%d\n", sum);
 	}
-	printf("0\n");
-
 	return (0);
 }
