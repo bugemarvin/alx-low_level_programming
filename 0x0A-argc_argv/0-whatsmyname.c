@@ -1,14 +1,14 @@
 #include "./main.h"
 #include <stdio.h>
 /**
-  * Description: main As the entry point.
+  * Description: main - As the entry point.
   * @argc: argument count.
   * @argv: argument value.
   *
   * Return: Always (0) on succes.
   */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
