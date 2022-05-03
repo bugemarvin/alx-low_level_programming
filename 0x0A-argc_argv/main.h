@@ -19,6 +19,6 @@
 */
 
 int _putchar(char c);
-int _filename(int argc, char* argv[]);
+int _onlynumbers(char *c);
 
 #endif
