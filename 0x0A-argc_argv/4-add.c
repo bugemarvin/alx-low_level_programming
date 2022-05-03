@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		c = strtol(argv[a], NULL, 10);
 		sum += c;
 	}
-	if (argc <= )
+	if (argc <= 1)
 	{
 		printf("0\n");
 	}
