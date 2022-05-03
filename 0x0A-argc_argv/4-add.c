@@ -19,9 +19,9 @@ int main(int argc, char *argv[])
 
 	for (a = 1; a < argc; a++)
 	{
-		for (c = 2; argv[a][c]; c++)
+		for (c = 2; argv[a][c] != '\0'; c++)
 		{
-			if (!(argv[a][c] > 48) || !(argv[a][c] < 57))
+			if (argv[a][c] < 48 || argv[a][c] > 57)
 			{
 				printf("Error\n");
 				return (1);
