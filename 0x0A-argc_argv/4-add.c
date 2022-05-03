@@ -13,7 +13,6 @@
 int main(int argc, char *argv[])
 {
 	int a;
-	int b = 0;
 	int c;
 	int sum = 0;
 
@@ -36,7 +35,7 @@ int main(int argc, char *argv[])
 	}
 	else if (argc <= 1)
 	{
-		printf("%d\n", b);
+		printf("0\n");
 	}
 	return (0);
 }
