@@ -24,6 +24,10 @@ char *create_array(unsigned int size, char c)
 	{
 		return (p);
 	}
+	else if ((p = (char *)malloc(size * sizeof(char))) == NULL)
+	{
+		return (NULL);
+	}
 	else
 		return (NULL);
 	return (0);
