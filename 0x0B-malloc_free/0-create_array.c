@@ -20,15 +20,15 @@ char *create_array(unsigned int size, char c)
 		p[a] = c;
 	}
 
-	if (size > 0)
+	if (size >= 1)
 	{
 		return (p);
 	}
-	else if (size == 0)
+	if (size == 0)
 	{
 		return (NULL);
 	}
-	else
+	if (p == NULL)
 	{
 	return (NULL);
 	}
