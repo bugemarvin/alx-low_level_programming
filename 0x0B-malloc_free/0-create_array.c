@@ -20,13 +20,9 @@ char *create_array(unsigned int size, char c)
 		p[a] = c;
 	}
 
-	if (size > 0)
+	if (size >= 1)
 	{
 		return (p);
-	}
-	else if ((p = (char *)malloc(size * sizeof(char))) == NULL)
-	{
-		return (NULL);
 	}
 	else
 		return (NULL);
