@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 		p[a] = c;
 	}
 
-	if (size > 0)
+	if (p ==  NULL)
 	{
 		return (p);
 	}
@@ -30,9 +30,9 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	if (p == NULL)
+	if (*p)
 	{
-		return (NULL);
+		return (p);
 	}
 
 	free(p);
