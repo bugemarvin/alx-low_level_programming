@@ -35,7 +35,5 @@ char *create_array(unsigned int size, char c)
 		return (p);
 	}
 
-	free(p);
-
-	return (0);
+	return (p);
 }
