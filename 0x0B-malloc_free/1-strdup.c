@@ -7,34 +7,35 @@
   * @str: pointer for a new space of memory.
   *
   * Returns: Always (0) on succes.
-  * Returns: -1 NULL if empty as well as insufficent memory.
   */
 
 char *_strdup(char *str)
 {
 	int a;
 	char *p;
-	int size = 50;
+	int size = 0;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	for (a = 0; str[a] != '\0'; a++)
+	{
+		size++;
+	}
 
-	p = (char *)malloc(size * sizeof(char));
+	p = (char *)malloc((size + 1) * sizeof(char));
 
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 
-	for (a = 0; a < size; a++)
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		if (size > 0)
-		{
-			p[a] = str[a];
-		}
+		p[a] = str[a];
 	}
-
+	
+	p[size] = '\0';
 	return (p);
 }
