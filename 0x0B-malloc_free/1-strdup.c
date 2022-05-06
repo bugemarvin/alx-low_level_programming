@@ -3,11 +3,11 @@
 #include <unistd.h>
 
 /**
-  * _strdup(char *str) - main entry allocated space memory.
-  * @str: pointer for a new space of memory.
-  *
-  * Returns: Always (0) on succes.
-  */
+ * _strdup - main entry allocated space memory.
+ * @str: pointer for a new space of memory.
+ *
+ * Return: Always (0) on succes.
+ */
 
 char *_strdup(char *str)
 {
@@ -19,6 +19,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+
 	for (a = 0; str[a] != '\0'; a++)
 	{
 		size++;
@@ -35,7 +36,7 @@ char *_strdup(char *str)
 	{
 		p[a] = str[a];
 	}
-	
+
 	p[size] = '\0';
 	return (p);
 }
