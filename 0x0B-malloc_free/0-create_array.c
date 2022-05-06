@@ -12,25 +12,26 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *p = (char *)malloc(size * sizeof(char));
 	unsigned int a;
+	char *p;
 
+	if (size == 0)
+	{
+		return NULL;
+	}
+
+	if (p = (char *)malloc(size * sizeof(char)) == NULL)
+	{
+		return NULL;
+	}
+
+	p = (char *)malloc(size * sizeof(char));
 	for (a = 0; a < size; a++)
 	{
 		if (size > 0)
 		{
-		p[a] = c;
+			p[a] = c;
 		}
-	}
-
-	if (p ==  NULL)
-	{
-		return (p);
-	}
-
-	if (size == 0)
-	{
-		return (NULL);
 	}
 
 	return (p);
