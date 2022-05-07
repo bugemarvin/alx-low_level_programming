@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	p = (char *)malloc((a + b + 1) * sizeof(char));
+	p = (char *)malloc(a + b + 1);
 
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
