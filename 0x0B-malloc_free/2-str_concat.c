@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	int b = strlen(s2);
 	char *p;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
 	}
