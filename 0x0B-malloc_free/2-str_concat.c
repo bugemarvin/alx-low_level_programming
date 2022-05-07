@@ -27,14 +27,14 @@ char *str_concat(char *s1, char *s2)
 		memcpy(p + a, s2, b);
 	}
 
-	if (s1 != NULL && s2 == NULL)
-	{
-		memcpy(p, s1, a);
-	}
-
-	if (s1 == NULL && s2 != NULL)
+	if (s1 == NULL)
 	{
 		memcpy(p, s2, b);
+	}
+
+	if (s2 == NULL)
+	{
+		memcpy(p, s1, a);
 	}
 
 	p[a + b] = '\0';
