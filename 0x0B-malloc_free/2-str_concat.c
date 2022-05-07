@@ -17,17 +17,16 @@ char *str_concat(char *s1, char *s2)
 {
 	int a = strlen(s1);
 	int b = strlen(s2);
-	char *p;
-
-	if (s1 == NULL || s2 == NULL)
-	{
-		return (NULL);
-	}
-
-	p = (char *)malloc(a + b + 1);
+	char *p = (char *)malloc(a + b + 1);
 
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
+
+	if (s1 == NULL)
+		return (NULL);
+
+	if (s2 == NULL)
+		return (NULL);
 
 	p[a + b] = '\0';
 	return (p);
