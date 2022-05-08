@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
 /**
   * alloc_grid - main entry for 2 dimensional array.
   * @width: initial size for rows.
@@ -43,4 +41,6 @@ int **alloc_grid(int width, int height)
 			p[a][b] = 0;
 	}
 	return (p);
+	free(p);
+	p = NULL;
 }
