@@ -21,24 +21,20 @@ char *str_concat(char *s1, char *s2)
 
 	p = (char *)malloc((a + b + 1) * sizeof(char));
 
-	if (s1 != NULL || s2 != NULL)
+	if (s1 != NULL && s2 != NULL)
 	{
 		memcpy(p, s1, a);
 		memcpy(p + a, s2, b);
 	}
-
-	if (s1 == NULL)
+	else if (s1 != NULL && s2 == NULL)
 	{
 		memcpy(p, s2, b);
 	}
-
-	if (s2 == NULL)
+	else if (s1 == NULL && s2 != NULL)
 	{
 		memcpy(p, s1, a);
 	}
 
 	p[a + b] = '\0';
 	return (p);
-	free(p);
-	p = NULL;
 }
