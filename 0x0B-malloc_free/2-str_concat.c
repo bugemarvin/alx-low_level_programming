@@ -33,6 +33,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
+	if (s1 != NULL && s2 == NULL)
+	{
+		p = s1;
+	}
+	if (s1 == NULL && s2 != NULL)
+	{
+		p = s2;
+	}
+	if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
 
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
