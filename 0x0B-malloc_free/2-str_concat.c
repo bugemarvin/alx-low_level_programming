@@ -19,6 +19,12 @@ char *str_concat(char *s1, char *s2)
 	int b = strlen(s2);
 	char *p;
 
+	p = (char *)malloc((a + b + 1) * sizeof(char));
+
+	if (p == NULL)
+	{
+		return (NULL);
+	}
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -28,16 +34,10 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	p = (char *)malloc((a + b + 1) * sizeof(char));
-
-	if (p == NULL)
-	{
-		return (NULL);
-	}
-
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
 
 	p[a + b] = '\0';
 	return (p);
+	free(p);
 }
