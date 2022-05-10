@@ -19,11 +19,11 @@ void *malloc_checked(unsigned int b)
 		size++;
 	}
 
-	p = (unsigned int *)malloc(size  * sizeof(unsigned int));
+	p = malloc(size * sizeof *p);
 
 	if (p == NULL)
 	{
-		return (0);
+		exit (3);
 	}
 		return (p);
 }
