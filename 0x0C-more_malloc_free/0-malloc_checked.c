@@ -11,14 +11,9 @@
 
 void *malloc_checked(unsigned int b)
 {
-	unsigned int *p, a, size = 0;
+	unsigned int *p;
 
-	for (a = 0; a != '\0'; a++)
-	{
-		size++;
-	}
-
-	p = malloc(b * size);
+	p = malloc(b);
 
 	if (p == NULL)
 	{
