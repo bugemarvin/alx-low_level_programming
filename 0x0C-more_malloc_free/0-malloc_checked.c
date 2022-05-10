@@ -18,12 +18,11 @@ void *malloc_checked(unsigned int b)
 		size++;
 	}
 
-	p = malloc(sizeof b * size);
+	p = malloc(b * size);
 
 	if (p == NULL)
 	{
 		exit(98);
 	}
-	
 	return (p);
 }
