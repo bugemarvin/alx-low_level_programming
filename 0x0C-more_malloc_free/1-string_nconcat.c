@@ -3,19 +3,19 @@
 #include <stdlib.h>
 
 /**
-  * string_nconcat - main that concatenates two strings.
-  * @s1:
-  * @s2:
-  * @n:
-  *
-  * Return: Always (NULL) if function fails and also treated as
-  * empty string.
-  */
+ * *string_nconcat - main entry that concatenates two strings.
+ * @s1: first pointer for the string.
+ * @s2: Second pointer for the string
+ * @n: the number for the string.
+ *
+ * Return: Always (NULL) if function fails and also treated as empty string.
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int a, b, size = n = 0;
 	char *p;
+
 	if (s1 == NULL)
 	{
 		s1 = "";
@@ -24,25 +24,25 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	for (a =0; s1[a] != '\0'; a++)
+	for (a = 0; s1[a] != '\0'; a++)
 	{
 		size++;
 	}
-	if (s2 != NULL)
-	{
 	for (b = 0; s2[b] != '\0'; b++)
 	{
 		size++;
 	}
+	p = malloc(size);
+	if (size >= strtol(s2, NULL, 10))
+	{
+		size = b + 1;
 	}
-	else
-		exit(98);
-	p = malloc(n * size);
-	if ( p == NULL)
+	if (p == NULL)
 	{
 		return (NULL);
 	}
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
+	p[size] = '\0';
 	return (p);
 }
