@@ -12,7 +12,7 @@ void *malloc_checked(unsigned int b)
 {
 	int a;
 	unsigned int *p = &b;
-	int size;
+	int size = 0;
 
 	for (a = 0; p[a] != '\0'; a++)
 	{
