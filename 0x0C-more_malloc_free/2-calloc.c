@@ -28,5 +28,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	p[a] = '\0';
-	return(p);
+	return (p);
 }
