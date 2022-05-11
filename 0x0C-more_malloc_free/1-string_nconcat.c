@@ -32,10 +32,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		size++;
 	}
-	p = malloc(sizeof(*p) * size);
+	p = malloc(size);
 	if (size >= strtol(s2, NULL, 10))
 	{
 		size = b + 1;
+	}
+	else
+	{
+		exit(98);
 	}
 	if (p == NULL)
 	{
@@ -45,5 +49,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	memcpy(p + a, s2, b);
 	p[size] = '\0';
 	return (p);
-	exit(98);
 }
