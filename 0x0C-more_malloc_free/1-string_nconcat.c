@@ -13,7 +13,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int a, b, size = n = 0;
+	unsigned int a, b, size = 0;
 	char *p;
 
 	if (s1 == NULL)
@@ -32,15 +32,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		size++;
 	}
+	p = malloc(size - 1);
 	if (size >= strtol(s2, NULL, 10))
 	{
-		size = b + 1;
+		size = n = ++b;
 	}
-	else
-	{
-		exit(98);
-	}
-	p = malloc(size);
 	if (p == NULL)
 	{
 		return (NULL);
@@ -49,4 +45,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	memcpy(p + a, s2, b);
 	p[size] = '\0';
 	return (p);
+	exit(3);
 }
