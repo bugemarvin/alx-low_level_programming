@@ -26,25 +26,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (a = 0; s1[a] != '\0'; a++)
 	{
-		size1++;
+		p = malloc(size1);
+		size = ++size1;
 	}
 	for (b = 0; s2[b] != '\0'; b++)
 	{
-		size2++;
+		p = malloc(size2);
+		size = ++size2;
 	}
-	size = size1 + size2;
-	p = malloc(size);
 	if (size2 >= strtol(s2, NULL, 10))
 	{
 		size = b + 1;
 	}
 	if (p == NULL)
 	{
-		return ("");
+		p = "";
+		return (NULL);
 	}
+	if (p != NULL)
+	{
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
+	}
 	p[size] = '\0';
 	return (p);
+	free(p);
 	exit(3);
 }
