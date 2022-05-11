@@ -38,13 +38,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		size = b + 1;
 	}
-	if (s1 == NULL && s2 == NULL)
-	{
-		p = "";
-	}
 	if (p == NULL)
 	{
-		return (NULL);
+		return ("");
 	}
 	memcpy(p, s1, a);
 	memcpy(p + a, s2, b);
