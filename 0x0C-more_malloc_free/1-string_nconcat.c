@@ -34,17 +34,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		size++;
 	}
 	p = malloc(sizeof(*p) * size);
-
-	if (p == NULL)
+	if (p != NULL)
 	{
-		return (NULL);
+		memcpy(p, s1, a);
+		memcpy(p + a, s2, b);
+	}
+	else
+	{
+		exit(98);
 	}
 	if (n >= strtol(s2, NULL, 10))
 	{
 		size = b + 1;
 	}
-	memcpy(p, s1, a);
-	memcpy(p + a, s2, b);
+	if (p == NULL)
+	{
+		return (NULL);
+	}
 	p[size] = '\0';
 	return (p);
 }
