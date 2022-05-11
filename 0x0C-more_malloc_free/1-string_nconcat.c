@@ -32,10 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		size++;
 	}
-	p = malloc(size - 1);
+	p = malloc(size);
 	if (size >= strtol(s2, NULL, 10))
 	{
-		size = n = ++b;
+		size = n = (b + 1);
 	}
 	if (p == NULL)
 	{
