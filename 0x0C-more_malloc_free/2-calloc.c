@@ -12,24 +12,22 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int a;
-	void *p = &nmemb;
+	void *pntr;
+	char *content;
+	unsigned int arry_index;
 
 	if (nmemb == 0 || size == 0)
-	{
 		return (NULL);
-	}
-	for (a = 0; a != '\0'; a++)
-	{
-		size++;
-	}
 
-	p = malloc(sizeof(p) * size);
+	pntr = malloc(size * nmemb);
 
-	if (p == NULL)
-	{
+	if (pntr == NULL)
 		return (NULL);
-	}
 
-	return (p);
+	content = pntr;
+
+	for (arry_index = 0; arry_index < (size * nmemb); arry_index++)
+		content[arry_index] = '\0';
+
+	return (pntr);
 }
