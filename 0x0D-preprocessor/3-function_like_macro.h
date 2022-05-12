@@ -1,0 +1,7 @@
+#ifndef FUNCTION_LIKE_MACRO_H_INCLUDED
+#define FUNCTION_LIKE_MACRO_H_INCLUDED
+
+#define ABS(X)\
+	(X)
+
+#endif
