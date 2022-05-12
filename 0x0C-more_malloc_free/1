@@ -36,10 +36,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (size2 >= strtol(s2, NULL, 10))
 	{
-		if (s2[b] != '\0')
-			size = size2 = size + b + 1;
-		if (b != '\0')
-			size = size2 = ++b;
+		for (b = 0; s2[b]; b++)
+		{
+			if (b != '\0')
+				size = size2 = ++b;
+		}
 	}
 	if (p == NULL)
 	{
