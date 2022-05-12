@@ -12,29 +12,26 @@
 
 int *array_range(int min, int max)
 {
-	void *pntr;
-	int size = 0, arry_index, *arry;
-	
-
-	size = min * max;
+	int *pntr;
+	int size, arry_index;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
 
-	pntr = malloc(size);
+	size = max - min + 1;
+
+	pntr = malloc(sizeof(pntr) * size);
 
 	if (pntr == NULL)
 	{
 		return (NULL);
 	}
 
-	arry = pntr;
-
 	for (arry_index = 0; arry_index < size; arry_index++)
 	{
-		arry[arry_index] = '\0';
+		pntr[arry_index] = min++;
 	}
 
 	return (pntr);
