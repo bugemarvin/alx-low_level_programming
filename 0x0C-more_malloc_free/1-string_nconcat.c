@@ -25,13 +25,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 	{
 		s2 = "";
+		exit(98);
 	}
 
 	size = size1 + size2 + 1;
 	p = malloc(sizeof(*p) * size);
-	if (s1 == NULL && s2 == NULL)
+	if (p == NULL)
 	{
-		return (NULL);
+		p = "";
+		exit(98);
 	}
 	for (combo = 0; combo < size1; combo++)
 	{
