@@ -13,7 +13,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int c, size;
+	unsigned int combo, size;
 	unsigned int size1 = strlen(s1);
 	unsigned int size2 = strlen(s2);
 	char *p;
@@ -28,21 +28,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	size = size1 + size2 + 1;
-	
-	p = malloc(size);
-	
-	if (p == NULL)
+	p = malloc(sizeof(*p) * size);
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
-		exit(98);
 	}
-	for (c = 0; c < size1; c++)
+	for (combo = 0; combo < size1; combo++)
 	{
-		p[c] = s1[c];
+		p[combo] = s1[combo];
 	}
-	for (c = 0; c < size2; c++)
+	for (combo = 0; combo < size2; combo++)
 	{
-		p[size1 + c] = s2[c];
+		p[size1 + combo] = s2[combo];
 	}
 
 	if (n >= strtol(s2, NULL, 10))
