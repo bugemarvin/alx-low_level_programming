@@ -10,7 +10,7 @@
   * Return: Always 0.
   */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
