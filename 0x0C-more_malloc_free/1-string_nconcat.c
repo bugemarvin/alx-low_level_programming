@@ -16,7 +16,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int combo, size;
 	unsigned int size1 = strlen(s1);
 	unsigned int size2 = strlen(s2);
-	char *p;
+	void *p;
+	char *creator;
 
 	if (s1 == NULL)
 	{
@@ -29,7 +30,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	size = size1 + size2 + 1;
-	p = malloc(sizeof(*p) * size);
+	p = malloc(size);
+
+	creator = p;
 	if (p == NULL)
 	{
 		p = "";
@@ -37,17 +40,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (combo = 0; combo < size1; combo++)
 	{
-		p[combo] = s1[combo];
+		creator[combo] = s1[combo];
 	}
 	for (combo = 0; combo < size2; combo++)
 	{
-		p[size1 + combo] = s2[combo];
+		creator[size1 + combo] = s2[combo];
 	}
 
-	if (n >= strtol(s2, NULL, 10))
+	if (strtol(s2, NULL, 10) <= n)
 	{
 		size = ++size2;
 	}
-	p[size] = '\0';
+	creator[size] = '\0';
 	return (p);
 }
