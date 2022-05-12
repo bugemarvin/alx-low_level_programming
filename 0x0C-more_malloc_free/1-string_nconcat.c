@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (size2 >= strtol(s2, NULL, 10))
 	{
-		size = b + 1;
+		size = size2 = ++b;
 	}
 	if (p == NULL)
 	{
