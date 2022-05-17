@@ -12,16 +12,12 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list ap;
-		unsigned int i, calc;
+		unsigned int i, calc = 0;
+			va_star(ap, n);
 	if (n == 0)
 	{
 		return (0);
 	}
-
-	va_start(ap, n);
-
-	calc = 0;
-
 	for (i = 0; i < n; i++)
 	{
 		calc += va_arg(ap, int);
