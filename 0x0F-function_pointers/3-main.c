@@ -13,26 +13,29 @@
 
 int main(int argc, char *argv[])
 {
-	int asum;
-	int (*p)(int, int);
-		int a = strtol(argv[1], NULL, 10);
-		int b = strtol(argv[3], NULL, 10);
+	int calc;
+	int (*operator)(int, int);
+		int num1 = strtol(argv[1], NULL, 10);
+		int num2 = strtol(argv[3], NULL, 10);
+
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n"),
+			exit(98);
+	}
 
 	if (argc != 4)
 	{
 		printf("Error\n"),
 			exit(98);
 	}
-	if (argv[2][1] != '\0')
+
+	operator = get_op_func(argv[2]);
+	
+	if (operator != 0)
 	{
-		printf("Error\n"),
-			exit(98);
-	}
-	p = get_op_func(argv[2]);
-	if (*p != NULL)
-	{
-		asum = p(a, b);
-		printf("%d\n", asum);
+		calc = (*operator)(num1, num2);
+		printf("%d\n", calc);
 	}
 	else
 	{
