@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
 	}
 
 	operator = get_op_func(argv[2]);
-	
 	if (operator != 0)
 	{
 		calc = (*operator)(num1, num2);
