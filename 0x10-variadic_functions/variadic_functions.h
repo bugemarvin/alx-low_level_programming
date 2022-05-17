@@ -1,10 +1,9 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
-/**
+/*
   * Autor: Marvin Kurland.
-  * prototypes for variadic functions
-  *
+  * prototypes for variadic functions.
   */
 
 int _putchar(char c);
