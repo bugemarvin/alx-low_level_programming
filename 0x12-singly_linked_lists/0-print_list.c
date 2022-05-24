@@ -1,13 +1,27 @@
 #include "lists.h"
-#include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
+
+/**
+  * print_list - main function to print all elements.
+  * @h: constant pointer for list_t.
+  *
+  * Return: if str is NULL output [0] (nil).
+  */
 
 size_t print_list(const list_t *h)
-{
-	if (h != NULL)
+{	size_t a;
+	for (a = 0; h; a++)
 	{
-		printf("[%u] %s\n", h->len, h->str);
+		if (h->str == NULL)
+		{
+			printf("[%u] %s\n", 0,  "(nil)");
+		}
+		if (h->str != NULL && h->len >= 1)
+		{
+			printf("[%u] %s\n", h->len, h->str);
+		}
+		h = h->next;
 	}
-	else
-		printf("[%u] %s\n", (*h).len = 0, (*h).str = "(nil)");
+	return (a);
 }
