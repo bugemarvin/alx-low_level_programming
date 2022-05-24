@@ -17,10 +17,10 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int a = 0;
 	char *check;
 	list_t *ptr = malloc(sizeof(struct list_s));
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
+		if (ptr == NULL)
+		{
+			return (NULL);
+		}
 	check = strdup(str);
 	while (str[a])
 	{
@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (check == NULL)
 	{
 		free(ptr);
-		return NULL;
+		return (NULL);
 	}
 	ptr->len = a;
 	ptr->str = check;
