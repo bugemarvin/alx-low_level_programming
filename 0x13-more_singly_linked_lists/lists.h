@@ -16,4 +16,22 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+/*
+   * std global variables.
+   *
+   */
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <unistd.h>
+
+/*
+   * Author: MArvin Kurland.
+   * prototypes files for c.
+   *
+   */
+
+int _putchar(char c);
+
 #endif
