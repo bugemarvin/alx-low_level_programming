@@ -26,7 +26,7 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		a++;
 	}
-	if (check == NULL)
+	if (!check)
 	{
 		free(ptr);
 		return (NULL);
