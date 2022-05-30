@@ -13,11 +13,10 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t a;
-	
-	if (h == NULL)
-	{
-		return (0);
-	}
+		if (h == NULL)
+		{
+			return (0);
+		}
 	for (a = 0; h; a++)
 	{
 		if (h->n > 0)
