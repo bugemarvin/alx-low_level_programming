@@ -5,7 +5,7 @@
 #include <unistd.h>
 
 /**
-  * add_node - main function to add new nodes.
+  * add_node_end - main function to add new node from end.
   * @head: pointer ref for head for list_t.
   * @str: pointer to the string of the list_t.
   *
@@ -27,26 +27,22 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		a++;
 	}
-	if (!check)
-	{
-		free(ptr);
-		return (NULL);
-	}
 	ptr->len = a;
-	ptr->str = check;	
+	ptr->str = check;
 	ptr->next = NULL;
-	if ((*head == NULL))
+	last = (*head);
+	if ((*head) == NULL)
 	{
 		(*head) = ptr;
 	}
-	if ((*head) != NULL)
+	else
 	{
-		last = (*head);
 		while (last->next != NULL)
 		{
 			last = last->next;
 		}
 		last->next = ptr;
 	}
-	return ((*head));
+	return (ptr);
+	free(ptr);
 }
