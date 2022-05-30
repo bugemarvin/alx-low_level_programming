@@ -4,7 +4,6 @@
 
 /**
   * print_listint - main function to print elements and index.
-  * @a: counter for the function.
   * @h: pointer to the print list struct.
   *
   * Return: always 1 in succes.
