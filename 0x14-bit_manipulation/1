@@ -1,0 +1,29 @@
+#include "main.h"
+
+/**
+  * binary_to_uint - main function to return an int from binary.
+  * @b: function pointer for the int.
+  *
+  * Return: always 1.
+  */
+
+unsigned int binary_to_uint(const char *b)
+{
+	int a = atoi(b);
+	int c = 0;
+	int base = 1;
+
+	int temp = a, last_digit = 1;
+	if (temp <= 0)
+	{
+		return (0);
+	}
+	while (temp == 1)
+	{
+		last_digit = temp % 10;
+		temp = temp / 10;
+		c += last_digit * base;
+		base = base * 2;
+	}
+	return (c);
+}
