@@ -25,5 +25,6 @@ void bin_check(int a)
 
 void print_binary(unsigned long int n)
 {
-	bin_check(n);
+	if (n != '0')
+		bin_check(n);
 }
