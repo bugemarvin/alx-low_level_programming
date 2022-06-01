@@ -2,19 +2,18 @@
 #include <stdio.h>
 
 /**
-  * bincheck - function to check binary recusively.
-  * @a: points recusivly.
+  * bin_check - main function to print binary recusively.
+  * @a: variable for the check.
   *
-  * Return: always 1.
+  * Return: Always 1.
   */
 
-void bincheck(unsigned int a)
+void bin_check(int a)
 {
 	if (a > 1)
-	{
-		bincheck(a >> 1);
-	}
-	printf("%u", a & 1);
+		bin_check(a >> 1);
+
+	_putchar((a & 1) + 48);
 }
 
 /**
@@ -26,5 +25,5 @@ void bincheck(unsigned int a)
 
 void print_binary(unsigned long int n)
 {
-	bincheck(n);
+	bin_check(n);
 }
