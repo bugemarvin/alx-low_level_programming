@@ -6,7 +6,7 @@
   * @index: variable to add bits value.
   *
   * Return: Always 1 on succes
-  *		-1 on failuer.
+  *		-1 on faiure.
   */
 
 int clear_bit(unsigned long int *n, unsigned int index)
@@ -20,7 +20,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	}
 
-	mem_adjuster = 1 << index;
+	mem_adjuster = ~(1 << index);
 	*n = *n & mem_adjuster;
 	return (1);
 }
