@@ -26,7 +26,7 @@ int str_len(char *str)
   * @text_content: blank string for writing to a file.
   *
   * Return: Always 1 on succes,
-  * 	-1 on error and failuer.
+  *		-1 on error and failuer.
   */
 
 int create_file(const char *filename, char *text_content)
