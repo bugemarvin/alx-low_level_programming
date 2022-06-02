@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * str_len - function for string length.
+  * _strlen - function for string length.
   * @str: pointer to calculate string length.
   *
   * Return: Always 1 on succes
@@ -18,7 +18,7 @@ int _strlen(char *str)
 }
 
 /**
-  * cppend_text_to_file - main function for appending a files text.
+  * append_text_to_file - main function for appending a files text.
   * @filename: pointer for creating a file.
   * @text_content: blank string for writing to a file.
   *
