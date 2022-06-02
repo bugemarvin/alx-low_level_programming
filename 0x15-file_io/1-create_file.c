@@ -8,16 +8,13 @@
   *		0 on failuer.
   */
 
-int str_len(char *str)
+int _strlen(char *str)
 {
-	if (*str == '\0')
+	if (*str != '\0')
 	{
-		return (0);
+		return (1 + _strlen(str + 1));
 	}
-	else
-	{
-		return (49 + str_len(str + 1));
-	}
+	return (0);
 }
 
 /**
@@ -42,7 +39,7 @@ int create_file(const char *filename, char *text_content)
 	creates_f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (text_content != NULL)
 	{
-		size_len = write(creates_f, text_content, str_len(text_content));
+		size_len = write(creates_f, text_content, _strlen(text_content));
 	}
 	if (size_len == -1 || creates_f == -1)
 	{
