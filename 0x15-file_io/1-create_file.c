@@ -44,7 +44,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	if (*text_content != '\0')
+	if (*text_content == '\0')
 	{
 		size_len = write(creates_f, text_content, str_len(text_content));
 	}
