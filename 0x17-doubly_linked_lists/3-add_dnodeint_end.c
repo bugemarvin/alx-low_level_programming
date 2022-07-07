@@ -1,32 +1,39 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - function to add node at the end.
- * @head: pointer ref to the head of the struct.
- * @n: contant for the list.
+ * add_dnodeint_end - adds a new node at the end
+ * of a dlistint_t list
  *
- * Return: Always a new node at the end.
+ * @head: head of the list
+ * @n: value of the element
+ * Return: the address of the new element
  */
-
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	unsigned int a;
-	dlistint_t *end_node, *last_node;
+	dlistint_t *h;
+	dlistint_t *new;
 
-	end_node = malloc(sizeof(dlistint_t));
-	end_node->n = n;
-	end_node->next = NULL;
-	if (*head == NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = NULL;
+
+	h = *head;
+
+	if (h != NULL)
 	{
-		end_node->prev = NULL;
-		(*head) = end_node;
+		while (h->next != NULL)
+			h = h->next;
+		h->next = new;
 	}
-	for (a = 0; last_node->next != NULL; a++)
+	else
 	{
-		last_node = last_node->next;
+		*head = new;
 	}
-	last_node->next = end_node;
-	end_node->prev = last_node;
-	return (end_node);
-	free(end_node);
+
+	new->prev = h;
+
+	return (new);
 }
