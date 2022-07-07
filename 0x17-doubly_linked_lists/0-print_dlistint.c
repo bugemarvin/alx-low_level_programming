@@ -9,14 +9,14 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t a;
-		for (a = 0; h; a++)
+	int a;
+		for (a = 0; h != NULL; a++)
 		{
-			if (h->n != '\0')
+			if ((*h).n != 0)
 			{
-				printf("%d\n", h->n);
+				printf("%d\n", (*h).n);
 			}
-			h = h->next;
+			h = (*h).next;
 		}
 	return (a);
 }
