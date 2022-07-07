@@ -12,7 +12,7 @@ size_t print_dlistint(const dlistint_t *h)
 	int a;
 		for (a = 0; h != NULL; a++)
 		{
-			if ((*h).n != 0)
+			if ((*h).n != '\0')
 			{
 				printf("%d\n", (*h).n);
 			}
