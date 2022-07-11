@@ -1,5 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <unistd.h>
 
 /*
  * Author: MArvin Kurland.
@@ -11,7 +16,7 @@ int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
-int _isupper(int c);
+int _isupper(char c);
 int _isdigit(int c);
 int _strlen(char *s);
 void _puts(char *s);
