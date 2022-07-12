@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc *.o -lm -o liball.so
+gcc -shared *.o -lm -o liball.so
 
