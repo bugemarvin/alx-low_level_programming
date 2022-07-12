@@ -1,12 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * Description: main-Creating a C program that outputs by use of function puts
- * Return: 0 if successful
+ * _puts - main entry point.
+ * @str: prints the string.
+ *
+ * Retrun: Always a string.
  */
 
-int main(void)
+void _puts(char *str)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	puts(str);
 }
