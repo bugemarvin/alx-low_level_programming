@@ -10,12 +10,11 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-        hash_table_t *item;
+	hash_table_t *item = malloc(sizeof(hash_table_t) * size);
 
-        item = malloc(sizeof(hash_table_t) * size);
-        if (item == NULL)
-                return NULL;
-        if (item != NULL)
-                return item;
-        return (NULL);
+	if (item == NULL)
+		return (NULL);
+	if (item != NULL)
+		return (item);
+	return (NULL);
 }
