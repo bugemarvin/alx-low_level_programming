@@ -16,14 +16,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (item == NULL || array == NULL)
 		return (NULL);
-	if (!item || !array)
-		return (NULL);
 	while (a < size)
 	{
 		array[a] = NULL;
 		++a;
 	}
-	item->size = size;
 	item->array = array;
+	item->size = size;
 	return (item);
 }
