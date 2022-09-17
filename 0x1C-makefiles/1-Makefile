@@ -3,13 +3,14 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -pedantic -std=gnu89
 LIBS = -lm
 OBJ = main.o school.o
+SRC = $(wildcard ./*.C)
 
 all: school
 
 school: $(OBJ)
-	$(CC) $(CFLAGS) -o school main.o school.o $(LIBS)
+	$(CC) $(CFLAGS) -o school $(OBJ) $(LIBS)
 
-main.o: main.c school.c m.h
+main.o: $(SRC) m.h
 	$(CC) $(CFLAGS) -c main.c
 
 school.o: school.c m.h
