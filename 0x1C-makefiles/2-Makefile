@@ -1,14 +1,12 @@
 CC = gcc
 SRC = main.c school.c 
-OBJ = main.o school.o
+OBJ = $(SRC: .c=.o)
 NAME = school
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all:$(OBJ)
 	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 $(OBJ) -o $(NAME) -lm
 
-$(OBJ): $(SRC) m.h
+$(OBJ):$(SRC) m.h
 	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -c $(SRC)
 
 clean:
