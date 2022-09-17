@@ -1,5 +1,5 @@
 CC = gcc
-SRC = $(wildcard ./*.c)
+SRC = main.c school.c 
 OBJ = main.o school.o
 NAME = school
 
@@ -8,11 +8,8 @@ all: $(NAME)
 school: $(OBJ)
 	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -o $(NAME) $(OBJ) -lm
 
-main.o: $(SRC) m.h
-	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -c main.c
-
-school.o: $(SRC) m.h
-	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -c school.c
+$(OBJ): $(SRC) m.h
+	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -c $(SRC)
 
 clean:
 		rm -f $(OBJ) $(NAME)
