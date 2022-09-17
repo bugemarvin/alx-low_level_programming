@@ -1,0 +1,10 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+
+all: $(OBJ)
+	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 $(OBJ) -o $(NAME)
+
+clean:
+		rm -f $(OBJ) $(NAME)
