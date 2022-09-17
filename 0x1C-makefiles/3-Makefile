@@ -1,0 +1,20 @@
+NAME = school
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
+SRC = $(wildcard ./*.c)
+OBJ = $(SRC:.c=.o)
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+clean:
+		rm -f *~ *.swp $(NAME)
+
+oclean:
+		rm -f $(OBJ)
+
+fclean:
+		rm -f *~ *.swp $(OBJ) $(NAME)
+all:
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
