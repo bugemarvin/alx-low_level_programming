@@ -3,18 +3,18 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
 SRC = $(wildcard ./*.c)
 OBJ = $(SRC:.c=.o)
+RM = rm -f 
 
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-		rm -f *~ *.swp $(NAME)
+		$(RM) *~ *.swp $(NAME)
 
 oclean:
-		rm -f $(OBJ)
+		$(RM) $(OBJ)
 
 fclean:
-		rm -f *~ *.swp $(OBJ) $(NAME)
-all:
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+		$(RM) *~ *.swp $(OBJ) $(NAME)
 
+re: oclean all
