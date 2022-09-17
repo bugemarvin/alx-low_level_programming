@@ -1,16 +1,19 @@
 SRC=/*
-CC = gcc -Wall -Wextra -Werror -pedantic -std=gnu89
+CC = gcc 
+CFLAGS = -Wall -Wextra -Werror -pedantic -std=gnu89
+LIBS = -lm
+OBJ = main.o school.o
 
 all: school
 
-school: main.o school.o
-	$(CC) -o school main.o school.o -lm
+school: $(OBJ)
+	$(CC) $(CFLAGS) -o school main.o school.o $(LIBS)
 
 main.o: main.c school.c m.h
-	$(CC) -c main.c
+	$(CC) $(CFLAGS) -c main.c
 
 school.o: school.c m.h
-	$(CC) -c school.c
+	$(CC) $(CFLAGS)  -c school.c
 
 clean:
 		rm -f *.o school
