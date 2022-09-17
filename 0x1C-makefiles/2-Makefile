@@ -6,7 +6,7 @@ NAME = school
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -o $(NAME) $(OBJ) -lm
+	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 $(OBJ) -o $(NAME) -lm
 
 $(OBJ): $(SRC) m.h
 	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 -c $(SRC)
