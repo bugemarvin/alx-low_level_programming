@@ -5,7 +5,7 @@ OBJ = $(SRC:.c=.o)
 RM = rm -f 
 
 all: $(OBJ)
-	$(CC) -Wall -Werror -Wextra -pedatic $(OBJ) -o $(NAME)
+	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
 
 clean:
 		$(RM) *~ $(NAME)
