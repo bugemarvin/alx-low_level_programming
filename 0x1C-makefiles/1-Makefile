@@ -1,19 +1,16 @@
 CC = gcc 
-CFLAGS = -Wall -Wextra -Werror -pedantic -std=gnu89
-LIBS = -lm
-OBJ = main.o school.o
 SRC = $(wildcard ./*.C)
 
 all: school
 
-school: $(OBJ)
-	$(CC) $(CFLAGS) -o school $(OBJ) $(LIBS)
+school: main.o school.o
+	$(CC) -Wall -Werror -Wextra -pedantic -o school main.o school.o -lm
 
 main.o: $(SRC) m.h
-	$(CC) $(CFLAGS) -c main.c
+	$(CC) -Wall -Werror -Wextra -pedantic -c $(SRC)
 
 school.o: school.c m.h
-	$(CC) $(CFLAGS)  -c school.c
+	$(CC) -Wall -Werror -Wextra -pedantic -c $(SRC)
 
 clean:
 		rm -f *.o school
