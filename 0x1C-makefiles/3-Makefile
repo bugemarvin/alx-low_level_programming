@@ -1,12 +1,11 @@
 NAME = school
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
 SRC = $(wildcard ./*.c)
 OBJ = $(SRC:.c=.o)
 RM = rm -f 
 
 all: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) -Wall -Werror -Wextra -pedatic $(OBJ) -o $(NAME)
 
 clean:
 		$(RM) *~ *.swp $(NAME)
