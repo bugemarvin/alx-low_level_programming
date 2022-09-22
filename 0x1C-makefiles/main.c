@@ -1,7 +1,7 @@
 #include "m.h"
 
 /**
- * main - Entry point
+ * main - Entry point for tests
  *
  * Return: Always 
  */
