@@ -7,14 +7,16 @@ CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -lm
 all: $(NAME)
 
 $(NAME): $(SRC:.c=.o)
-	$(CC) -Wall -Wextra -Werror -pedantic -std=gnu89 $(SRC:.c=.o) -o $(NAME)
+	$(CC) $(SRC:.c=.o) -o $(NAME)
 
 clean:
-	$(RM = rm -f) *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 oclean:
-	$(RM = rm -f) $(SRC:.c=.o)
+	$(RM) -f $(SRC:.c=.o)
 
 fclean: clean oclean
 
 re: oclean all
+
+.PHONY: all clean oclean fclean re
