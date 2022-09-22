@@ -4,7 +4,7 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89 -lm
 
-all:$(SRC:.c=.o) m.h
+all:m.h $(SRC:.c=.o)
 	$(CC) $(SRC:.c=.o) -o $(NAME)
 
 clean:
