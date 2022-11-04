@@ -39,6 +39,10 @@ int binary_search(int *array, size_t size, int value)
 			{
 				r = b - 1;
 			}
+			else if (!(array[b] == value))
+			{
+				return (-1);
+			}
 			else
 			{
 				l = b + 1;
